@@ -1,12 +1,14 @@
 use inc::Module::Install;
 
-RTx('RT-Extension-MandatoryFields');
-license('perl');
-author('Benjamin Heisig <bheisig@synetics.de>');
-version('0.2');
-abstract_from('lib/RT/Extension/MandatoryFields.pm');
+RTx 'RT-Extension-MandatoryFields';
+
+all_from 'lib/RT/Extension/MandatoryFields.pm';
+license 'perl';
+readme_from;
 repository 'git://git.benjaminheisig.net/rt-extension-mandatoryfields.git';
+
+requires_rt('4.0.0');
+auto_install();
 
 sign;
 &WriteAll;
-
